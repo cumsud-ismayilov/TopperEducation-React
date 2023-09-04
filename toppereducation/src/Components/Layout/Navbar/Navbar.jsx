@@ -22,22 +22,35 @@ const Navbar = () => {
             <div className="site-middle">
               <ul className="nav-ul">
                 <li className="home-li">
-                  <Link to="/">Home</Link>
+                  <Link className="page-link" to="/">Home</Link>
                 </li>
                 <li className="page-li">
-                  <Link to="/pageone">Pages<BiCaretDown size="16px" /></Link>
+                  <Link className="page-link" to="/pageone">Pages<BiCaretDown size="16px" />
+                   <ul className="page-hover">
+                    <li className="about-li"><Link to="/aboutus">About Us</Link></li>
+                    <li className="about-li"><Link to="/gallery">Gallery</Link></li>
+                    <li className="about-li"><Link to="/faq">FAQ</Link></li>
+                    <li className="about-li"><Link to="/trems">Trems & Condition</Link></li>
+                    <li className="about-li"><Link to="/pravicy">Pravicy Policy</Link></li>
+                   </ul>
+                  </Link>
                 </li>
                 <li className="courses-li">
-                  <Link to="/courses">Courses<BiCaretDown size="16px"/></Link>
+                  <Link className="page-link" to="/courses">Courses<BiCaretDown size="16px"/>
+                  <ul className="course-hover">
+                    <li className="single-li"><Link to="/courseone">Course</Link></li>
+                    <li className="single-li"><Link to="/singlecourse">Single Course</Link></li>
+                  </ul>
+                  </Link>
                 </li>
                 <li className="events-li">
-                  <Link to="/events">Events</Link>
+                  <Link className="page-link" to="/events">Events</Link>
                 </li>
                 <li className="contact-li">
-                  <Link to="/contact">Contact</Link>
+                  <Link className="page-link" to="/contact">Contact</Link>
                 </li>
                 <li className="blog-li">
-                  <Link to="/blog">Blog</Link>
+                  <Link className="page-link" to="/blog">Blog</Link>
                 </li>
               </ul>
             </div>

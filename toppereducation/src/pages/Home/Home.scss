@@ -1,0 +1,91 @@
+main {
+  #banner {
+    padding-bottom: 2rem;
+    position: relative;
+    .banner-img {
+      width: 100%;
+      height: 848px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .banner-text{
+        position: absolute;
+        top: 14rem;
+        width: 600px;
+        right: 10rem;
+        p{
+            color: #fe4a55;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        h2{
+            color: #fff;
+            font-size: 45px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        h3{
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.9;
+            margin-bottom: 30px;
+            margin-right: 164px;
+        }
+        .join {
+            display: inline-block;
+            a {
+              text-decoration: none;
+              cursor: pointer;
+              background-color: #fe4a55;
+              color: #fff;
+              border-radius: 5px;
+              padding: 11px 42px;
+              line-height: 1.5;
+              font-size: 19px;
+              font-weight: 400;
+              transform: perspective(1px) translateZ(0);
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              position: relative;
+              &::before {
+                background: #fe4a55;
+                border-radius: 5px;
+  
+                content: "";
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform-origin: 50%;
+                transition-duration: 0.3s;
+                transform: scaleX(1);
+                transition-property: transform, -webkit-transform;
+                transition-timing-function: ease-out;
+              }
+              &:hover {
+                color: #fff;
+                background-color: #000;
+                &::before {
+                  transform: scaleX(0);
+  
+                  border-radius: 5px;
+                  bottom: 0;
+                  content: "";
+                  left: 0;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                }
+              }
+            }
+          }
+    }
+  }
+}
