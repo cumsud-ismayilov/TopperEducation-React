@@ -129,9 +129,43 @@
             line-height: 1.5;
             font-size: 19px;
             font-weight: 400;
+            transform: perspective(1px) translateZ(0);
             display: flex;
             align-items: center;
             gap: 6px;
+            position: relative;
+            &::before{
+                background: #fe4a55;
+                border-radius: 5px;
+                
+                content: "";
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform-origin: 50%;
+                transition-duration: .3s;
+                transform: scaleX(1);
+                transition-property: transform,-webkit-transform;
+                transition-timing-function: ease-out;
+                
+            }
+            &:hover{
+                color: #fff;
+                background-color: #000;
+                &::before{
+                    transform: scaleX(0);
+                                 
+                    border-radius: 5px;
+                    bottom: 0;
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    
+                }
+            }
           }
         }
       }
