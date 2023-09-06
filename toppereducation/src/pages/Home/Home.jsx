@@ -1,6 +1,7 @@
 import React from "react";
 import "../Home/Home.scss";
 import { Link } from "react-router-dom";
+import BannerCard from "../../Components/BannerCard/BannerCard";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
           <h4 className="join"><Link>Join for Free</Link></h4>
         </div>
       </section>
+      <BannerCard/>
     </main>
   );
 };
